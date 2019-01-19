@@ -1,6 +1,4 @@
 
-//what is currently being displayed?
-var current;  
 
 
 //for keeping score!
@@ -75,7 +73,7 @@ $("#startButton").on("click", function(){
 
     //let's build the visible countdown (as an additional timer to the intrinsic timeout)
 
-// $("#timer").append(visibleTimer);
+
 
 
 
@@ -217,27 +215,6 @@ $("#startButton").on("click", function(){
 
 
 
-//Reset button----------------------------------------------------------
-$("#resetButton").on("click", function(){
-
-$("#results").hide();
-$("#game").hide();
-//Need to figure out how to completely reset to original content!
-$("#questions").reset();
-$("#startButton").show();
-var visibleTimer = 30;
-var interval = setInterval(function(){
-    visibleTimer--;
-    $("#timer").html('<h3>Time Remaining: ' + visibleTimer + '</h3>');
-    if (visibleTimer == 0) {
-        clearInterval(interval);
-    }
-}, 1000);
-
-
-//end of reset button/repeating logic, etc.-----------------------------
-
-});
 
 function newGame(){
     $("#game").show();
